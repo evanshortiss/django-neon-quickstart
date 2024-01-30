@@ -87,7 +87,10 @@ DATABASES = {
         'PASSWORD': getenv('PGPASSWORD'),
         'HOST': getenv('PGHOST'),
         'PORT': getenv('PGPORT', 5432),
-        'CONN_MAX_AGE': int(getenv('DB_CONN_MAX_AGE', 30)),
+        # Create persistent database connections by default. Remove connections
+        # that have been idle for 30 seconds or longer. Set this to 0 if you'd
+        # like to use a new connection for each database query.
+        'CONN_MAX_AGE': int(getenv('CONN_MAX_AGE', 30)),
          'OPTIONS': {
              'sslmode': 'require',
         }
