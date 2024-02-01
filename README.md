@@ -4,7 +4,7 @@ _This repository is a companion to a [Python & Django with Neon post](https://ne
 
 An example Django application that connects to Neon's serverless Postgres, and uses HTMX for interactions.
 
-# Usgae
+# Usage
 
 ## Optional Environment Setup
 
@@ -38,11 +38,13 @@ source $HOME/.venv/neon-and-django-env/bin/activate
 
 ### Install Project Dependencies
 
+From the root of the project, run:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### Configure Postgres
+### Define Postgres Connection Details
 
 1. Visit [console.neon.tech](https://console.neon.tech/app/projects) and create a new project, or new database in an existing project.
 1. Copy the `.env.example` file in root of this repository into a new file named `.env`.
