@@ -2,7 +2,13 @@
 
 _This repository is a companion to a [Python & Django with Neon post](https://neon.tech/blog/python-django-and-neons-serverless-postgres) on the Neon blog._
 
-An example Django application that connects to Neon's serverless Postgres, and uses HTMX for interactions.
+An example Django application that connects to Neon's serverless Postgres, and
+uses HTMX for interactions. 
+
+Neon's serverless Postgres [auto-suspends](https://neon.tech/docs/introduction/auto-suspend)
+when the Django application hasn't issued a query for 5 minutes, meaning you
+get an on-demand database. This is great for development, test, and staging
+environments that don't need to run 24/7.
 
 ![Elements Application in Google Chrome](/images/elements-app.png)
 
