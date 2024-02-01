@@ -8,10 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-[#1A1A1A] p-10">
+    <p class="text-white text-center pb-7 text-xl">Click an element to delete it from the database.</p>
     <main class="flex items-center justify-center">
       <ul class="grid grid-cols-2 md:grid-cols-6 gap-5">
         {% for element in elements %}
-          <li class="relative flex flex-col text-center p-5 rounded-md bg-[#00E699] transition-colors hover:bg-red-500 text-[black]">
+          <li hx-delete="element/{{ element.id }}" hx-target="body" class="relative flex flex-col text-center p-5 rounded-md bg-[#00E699] transition-colors hover:bg-red-500 text-[black]">
             <p class="absolute top-2 left-2 text-sm">
               {{ element.atomic_number }}
             </p>
@@ -21,5 +22,6 @@
           {% endfor %}
       </ul>
     </main>
+    <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
   </body>
 </html>
