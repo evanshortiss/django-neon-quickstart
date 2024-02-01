@@ -4,6 +4,8 @@ _This repository is a companion to a [Python & Django with Neon post](https://ne
 
 An example Django application that connects to Neon's serverless Postgres, and uses HTMX for interactions.
 
+![Elements Application in Google Chrome](/images/elements-app.png)
+
 # Usage
 
 ## Optional Environment Setup
@@ -76,4 +78,3 @@ VALUES
 
 Start the application in development mode using `python manage.py runserver`, and visit http://localhost:8000 to see a list of elements.
 
-![Elements Application in Google Chrome](/images/elements-app.png)
